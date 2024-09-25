@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+
+int main(int argc, char *argv[]) {
+	int songuyen[6];
+	printf("nhap 6 so nguyen \n");
+	for (int i = 0; i < 6; i++)
+	{ 
+		scanf("%d",&songuyen[i]);
+	}
+	// batdau
+	for (int i = 0; i < 6; i++) {
+		for (int j = i + 1; j < 6 ;j++) {
+			if (songuyen[i] > songuyen[j]) {
+				int temp = songuyen[i];
+				songuyen[i] = songuyen [j];
+				songuyen [j] = temp;
+				
+			}
+		}
+	}
+
+	printf(" danh sach so nguyen sap xep theo thu tu la:\n ");
+	for (int i = 0; i < 6; i++) {
+			printf("%d ", songuyen[i]);
+	   }  
+	printf("\n");
+
+	return 0;
+}
